@@ -13,6 +13,11 @@
 		DFEF79071E51B35500120B3B /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DFEF79051E51B35500120B3B /* LaunchScreen.storyboard */; };
 		DFEF79121E51B35500120B3B /* DYZBTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = DFEF79111E51B35500120B3B /* DYZBTests.swift */; };
 		DFEF791D1E51B35500120B3B /* DYZBUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = DFEF791C1E51B35500120B3B /* DYZBUITests.swift */; };
+		DFEF79411E51B6EA00120B3B /* JHTabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DFEF79401E51B6EA00120B3B /* JHTabBarController.swift */; };
+		DFEF79431E51B7C100120B3B /* Follow.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DFEF79421E51B7C100120B3B /* Follow.storyboard */; };
+		DFEF79451E51B81D00120B3B /* Home.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DFEF79441E51B81D00120B3B /* Home.storyboard */; };
+		DFEF79471E51B82500120B3B /* Live.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DFEF79461E51B82500120B3B /* Live.storyboard */; };
+		DFEF79491E51B82D00120B3B /* Profile.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DFEF79481E51B82D00120B3B /* Profile.storyboard */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -45,6 +50,11 @@
 		DFEF79181E51B35500120B3B /* DYZBUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = DYZBUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		DFEF791C1E51B35500120B3B /* DYZBUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DYZBUITests.swift; sourceTree = "<group>"; };
 		DFEF791E1E51B35500120B3B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		DFEF79401E51B6EA00120B3B /* JHTabBarController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = JHTabBarController.swift; sourceTree = "<group>"; };
+		DFEF79421E51B7C100120B3B /* Follow.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Follow.storyboard; sourceTree = "<group>"; };
+		DFEF79441E51B81D00120B3B /* Home.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Home.storyboard; sourceTree = "<group>"; };
+		DFEF79461E51B82500120B3B /* Live.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Live.storyboard; sourceTree = "<group>"; };
+		DFEF79481E51B82D00120B3B /* Profile.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Profile.storyboard; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -149,6 +159,7 @@
 		DFEF792C1E51B42E00120B3B /* Controller */ = {
 			isa = PBXGroup;
 			children = (
+				DFEF79421E51B7C100120B3B /* Follow.storyboard */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -180,6 +191,7 @@
 		DFEF79301E51B42E00120B3B /* Controller */ = {
 			isa = PBXGroup;
 			children = (
+				DFEF79441E51B81D00120B3B /* Home.storyboard */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -211,6 +223,7 @@
 		DFEF79341E51B42E00120B3B /* Controller */ = {
 			isa = PBXGroup;
 			children = (
+				DFEF79461E51B82500120B3B /* Live.storyboard */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -242,6 +255,7 @@
 		DFEF79381E51B42E00120B3B /* Controller */ = {
 			isa = PBXGroup;
 			children = (
+				DFEF79481E51B82D00120B3B /* Profile.storyboard */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -280,6 +294,7 @@
 		DFEF793D1E51B6A000120B3B /* Controller */ = {
 			isa = PBXGroup;
 			children = (
+				DFEF79401E51B6EA00120B3B /* JHTabBarController.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -406,8 +421,12 @@
 			buildActionMask = 2147483647;
 			files = (
 				DFEF79071E51B35500120B3B /* LaunchScreen.storyboard in Resources */,
+				DFEF79451E51B81D00120B3B /* Home.storyboard in Resources */,
+				DFEF79471E51B82500120B3B /* Live.storyboard in Resources */,
 				DFEF79041E51B35500120B3B /* Assets.xcassets in Resources */,
 				DFEF79021E51B35500120B3B /* Main.storyboard in Resources */,
+				DFEF79491E51B82D00120B3B /* Profile.storyboard in Resources */,
+				DFEF79431E51B7C100120B3B /* Follow.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -433,6 +452,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				DFEF78FD1E51B35500120B3B /* AppDelegate.swift in Sources */,
+				DFEF79411E51B6EA00120B3B /* JHTabBarController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -12,7 +12,7 @@
         <!--Tab Bar Controller-->
         <scene sceneID="I6r-XT-vzB">
             <objects>
-                <tabBarController id="QWA-h0-BdY" sceneMemberID="viewController">
+                <tabBarController id="QWA-h0-BdY" customClass="JHTabBarController" customModule="DYZB" customModuleProvider="target" sceneMemberID="viewController">
                     <tabBar key="tabBar" contentMode="scaleToFill" id="ygP-VD-mGI">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="49"/>
                         <autoresizingMask key="autoresizingMask"/>
@@ -21,7 +21,7 @@
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="AWL-fR-Tyi" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-1521" y="-486"/>
+            <point key="canvasLocation" x="-1790" y="-515"/>
         </scene>
     </scenes>
 </document>
