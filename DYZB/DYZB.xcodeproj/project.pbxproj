@@ -107,7 +107,6 @@
 			children = (
 				DFEF792A1E51B42E00120B3B /* Classes */,
 				DFEF78FC1E51B35500120B3B /* AppDelegate.swift */,
-				DFEF79001E51B35500120B3B /* Main.storyboard */,
 				DFEF79031E51B35500120B3B /* Assets.xcassets */,
 				DFEF79051E51B35500120B3B /* LaunchScreen.storyboard */,
 				DFEF79081E51B35500120B3B /* Info.plist */,
@@ -294,6 +293,7 @@
 		DFEF793D1E51B6A000120B3B /* Controller */ = {
 			isa = PBXGroup;
 			children = (
+				DFEF79001E51B35500120B3B /* Main.storyboard */,
 				DFEF79401E51B6EA00120B3B /* JHTabBarController.swift */,
 			);
 			path = Controller;
@@ -494,6 +494,7 @@
 				DFEF79011E51B35500120B3B /* Base */,
 			);
 			name = Main.storyboard;
+			path = ../../..;
 			sourceTree = "<group>";
 		};
 		DFEF79051E51B35500120B3B /* LaunchScreen.storyboard */ = {
