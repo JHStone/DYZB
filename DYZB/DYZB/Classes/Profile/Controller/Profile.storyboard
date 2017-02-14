@@ -28,11 +28,13 @@
             </objects>
             <point key="canvasLocation" x="1071.2" y="-8.5457271364317844"/>
         </scene>
-        <!--Navigation Controller-->
+        <!--我的-->
         <scene sceneID="sAA-Zj-SIw">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="icn-Fi-R96" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="我的" image="btn_user_normal" selectedImage="btn_user_selected" id="PoT-5g-UUd"/>
                     <toolbarItems/>
+                    <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="BjO-Cs-xFg">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
@@ -47,4 +49,8 @@
             <point key="canvasLocation" x="132" y="-8.5457271364317844"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="btn_user_normal" width="24" height="24"/>
+        <image name="btn_user_selected" width="24" height="24"/>
+    </resources>
 </document>

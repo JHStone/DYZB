@@ -12,10 +12,12 @@ class JHTabBarController: UITabBarController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        addChildViewController(childControllerStoryBoard(name: "Follow"))
-        addChildViewController(childControllerStoryBoard(name: "Main"))
-        addChildViewController(childControllerStoryBoard(name: "Profile"))
+        addChildViewController(childControllerStoryBoard(name: "Home"))
         addChildViewController(childControllerStoryBoard(name: "Live"))
+        addChildViewController(childControllerStoryBoard(name: "Follow"))
+        
+        addChildViewController(childControllerStoryBoard(name: "Profile"))
+        
     }
     
     
