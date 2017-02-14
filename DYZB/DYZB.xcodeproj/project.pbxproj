@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		DF3FE10B1E52F8F400A30239 /* PageTitleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF3FE10A1E52F8F400A30239 /* PageTitleView.swift */; };
+		DF3FE10D1E52FE4800A30239 /* Common.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF3FE10C1E52FE4800A30239 /* Common.swift */; };
+		DF3FE10F1E53028000A30239 /* UIColor-Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF3FE10E1E53028000A30239 /* UIColor-Extension.swift */; };
 		DFE058211E52DE960027CF60 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DFE058201E52DE960027CF60 /* HomeViewController.swift */; };
 		DFE058231E52E3070027CF60 /* UIBarButtonItem-Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = DFE058221E52E3070027CF60 /* UIBarButtonItem-Extension.swift */; };
 		DFEF78FD1E51B35500120B3B /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DFEF78FC1E51B35500120B3B /* AppDelegate.swift */; };
@@ -40,6 +43,9 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		DF3FE10A1E52F8F400A30239 /* PageTitleView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PageTitleView.swift; sourceTree = "<group>"; };
+		DF3FE10C1E52FE4800A30239 /* Common.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Common.swift; sourceTree = "<group>"; };
+		DF3FE10E1E53028000A30239 /* UIColor-Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIColor-Extension.swift"; sourceTree = "<group>"; };
 		DFE058201E52DE960027CF60 /* HomeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
 		DFE058221E52E3070027CF60 /* UIBarButtonItem-Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIBarButtonItem-Extension.swift"; sourceTree = "<group>"; };
 		DFEF78F91E51B35500120B3B /* DYZB.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DYZB.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -282,6 +288,8 @@
 			isa = PBXGroup;
 			children = (
 				DFE058221E52E3070027CF60 /* UIBarButtonItem-Extension.swift */,
+				DF3FE10E1E53028000A30239 /* UIColor-Extension.swift */,
+				DF3FE10C1E52FE4800A30239 /* Common.swift */,
 			);
 			path = Tools;
 			sourceTree = "<group>";
@@ -315,6 +323,7 @@
 		DFEF793F1E51B6A000120B3B /* View */ = {
 			isa = PBXGroup;
 			children = (
+				DF3FE10A1E52F8F400A30239 /* PageTitleView.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -459,7 +468,10 @@
 			files = (
 				DFEF78FD1E51B35500120B3B /* AppDelegate.swift in Sources */,
 				DFEF79411E51B6EA00120B3B /* JHTabBarController.swift in Sources */,
+				DF3FE10B1E52F8F400A30239 /* PageTitleView.swift in Sources */,
 				DFE058231E52E3070027CF60 /* UIBarButtonItem-Extension.swift in Sources */,
+				DF3FE10D1E52FE4800A30239 /* Common.swift in Sources */,
+				DF3FE10F1E53028000A30239 /* UIColor-Extension.swift in Sources */,
 				DFE058211E52DE960027CF60 /* HomeViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
