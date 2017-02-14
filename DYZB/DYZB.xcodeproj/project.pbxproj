@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		DFE058211E52DE960027CF60 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DFE058201E52DE960027CF60 /* HomeViewController.swift */; };
+		DFE058231E52E3070027CF60 /* UIBarButtonItem-Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = DFE058221E52E3070027CF60 /* UIBarButtonItem-Extension.swift */; };
 		DFEF78FD1E51B35500120B3B /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DFEF78FC1E51B35500120B3B /* AppDelegate.swift */; };
 		DFEF79041E51B35500120B3B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DFEF79031E51B35500120B3B /* Assets.xcassets */; };
 		DFEF79071E51B35500120B3B /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DFEF79051E51B35500120B3B /* LaunchScreen.storyboard */; };
@@ -38,6 +40,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		DFE058201E52DE960027CF60 /* HomeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
+		DFE058221E52E3070027CF60 /* UIBarButtonItem-Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIBarButtonItem-Extension.swift"; sourceTree = "<group>"; };
 		DFEF78F91E51B35500120B3B /* DYZB.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DYZB.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		DFEF78FC1E51B35500120B3B /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		DFEF79031E51B35500120B3B /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -191,6 +195,7 @@
 			isa = PBXGroup;
 			children = (
 				DFEF79441E51B81D00120B3B /* Home.storyboard */,
+				DFE058201E52DE960027CF60 /* HomeViewController.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -276,6 +281,7 @@
 		DFEF793B1E51B42E00120B3B /* Tools */ = {
 			isa = PBXGroup;
 			children = (
+				DFE058221E52E3070027CF60 /* UIBarButtonItem-Extension.swift */,
 			);
 			path = Tools;
 			sourceTree = "<group>";
@@ -453,6 +459,8 @@
 			files = (
 				DFEF78FD1E51B35500120B3B /* AppDelegate.swift in Sources */,
 				DFEF79411E51B6EA00120B3B /* JHTabBarController.swift in Sources */,
+				DFE058231E52E3070027CF60 /* UIBarButtonItem-Extension.swift in Sources */,
+				DFE058211E52DE960027CF60 /* HomeViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
