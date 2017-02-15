@@ -8,6 +8,8 @@
 
 import UIKit
 
+fileprivate let scrollViewLineH : CGFloat = 2
+
 class PageTitleView: UIView {
     
     fileprivate lazy  var titleArray : [String] = [String]()
@@ -16,6 +18,11 @@ class PageTitleView: UIView {
         scrollView.scrollsToTop = false
         scrollView.showsHorizontalScrollIndicator = false
         return scrollView
+    }()
+    fileprivate lazy var scrollViewLine : UIView = {
+        let scrollViewLine = UIView()
+        scrollViewLine.backgroundColor = UIColor.orange
+        return scrollViewLine
     }()
     
     //定义元组
@@ -67,6 +74,10 @@ extension PageTitleView{
         bottomLine.backgroundColor = UIColor.lightGray
         addSubview(bottomLine)
         
+        
+        //底部的orangeView
+        scrollViewLine.frame = CGRect(x: 0, y: frame.height - lineH - scrollViewLineH, width: screenW / CGFloat(titleArray.count), height: scrollViewLineH)
+        addSubview(scrollViewLine)
     }
     
 }
