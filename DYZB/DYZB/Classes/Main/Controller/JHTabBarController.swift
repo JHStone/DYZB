@@ -15,11 +15,8 @@ class JHTabBarController: UITabBarController {
         addChildViewController(childControllerStoryBoard(name: "Home"))
         addChildViewController(childControllerStoryBoard(name: "Live"))
         addChildViewController(childControllerStoryBoard(name: "Follow"))
-        
         addChildViewController(childControllerStoryBoard(name: "Profile"))
-        
     }
-    
     
     fileprivate func childControllerStoryBoard(name :String) -> UIViewController {
       return  UIStoryboard(name: name, bundle: nil).instantiateInitialViewController()!
