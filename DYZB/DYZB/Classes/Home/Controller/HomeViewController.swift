@@ -14,11 +14,24 @@ class HomeViewController: UIViewController {
         let pageTitleView = PageTitleView(frame: CGRect(x: 0, y: kNavigationH, width: screenW, height: pageTitleViewH)  , titles:  ["推荐","游戏", "娱乐","趣玩"])
         return pageTitleView
     }()
-
+    
+    fileprivate lazy var  pageContentView : PageContentView = {
+        let frame = CGRect(x: 0, y: kNavigationH + pageTitleViewH, width: screenW, height: screenH - kNavigationH - pageTitleViewH)
+        var childVCs = [UIViewController]()
+        childVCs.append(RecommendViewController())
+        childVCs.append(GameViewController())
+        childVCs.append(AmuseViewController())
+        childVCs.append(FunnyViewController())
+        var contentView = PageContentView(frame:frame , childVCs: childVCs)
+        
+        return contentView
+    }()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         setupNavigationBar()
         setupPageTitleView()
+        setupPageContentView()
         automaticallyAdjustsScrollViewInsets = false
     }
 }
@@ -42,7 +55,11 @@ extension HomeViewController{
          navigationItem.rightBarButtonItems = [timeItem,searchItem,qrItem ]
     }
     
-    fileprivate func setupPageTitleView(){
-        view.addSubview(pageTitleView)
+    fileprivate func  setupPageTitleView(){
+        view.addSubview(self.pageTitleView)
+    }
+    
+    fileprivate func setupPageContentView(){
+        view.addSubview(self.pageContentView)
     }
 }
