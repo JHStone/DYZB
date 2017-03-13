@@ -15,7 +15,7 @@ private let kSelectColor : (CGFloat, CGFloat, CGFloat) = (255, 128, 0)
 
 class PageTitleView: UIView {
     
-    fileprivate lazy  var titleArray : [String] = [String]()
+    lazy  var titleArray : [String] = [String]()
     fileprivate lazy var titlesLabels : [UILabel] = [UILabel]()
     fileprivate var lastIndex : Int = 0
     fileprivate lazy var scrollView : UIScrollView = {

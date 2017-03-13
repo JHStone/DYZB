@@ -10,20 +10,20 @@ import UIKit
 
 class HomeViewController: UIViewController {
     
-    fileprivate var pageTitleView : PageTitleView = {
-        let pageTitleView = PageTitleView(frame: CGRect(x: 0, y: kNavigationH, width: screenW, height: pageTitleViewH)  , titles:  ["推荐","游戏", "娱乐","趣玩"])
+    lazy var pageTitleView : PageTitleView = {
+        let titles = ["推荐","游戏", "娱乐","趣玩"]
+        let pageTitleView = PageTitleView(frame: CGRect(x: 0, y: kNavigationH, width: screenW, height: pageTitleViewH)  , titles:  titles)
         return pageTitleView
     }()
     
-    fileprivate lazy var  pageContentView : PageContentView = {
+    fileprivate lazy var  pageContentView : PageContentView = {[weak self] in
         let frame = CGRect(x: 0, y: kNavigationH + pageTitleViewH, width: screenW, height: screenH - kNavigationH - pageTitleViewH)
         var childVCs = [UIViewController]()
         childVCs.append(RecommendViewController())
         childVCs.append(GameViewController())
         childVCs.append(AmuseViewController())
         childVCs.append(FunnyViewController())
-        var contentView = PageContentView(frame:frame , childVCs: childVCs)
-        
+        let  contentView = PageContentView(frame:frame , childVCs: childVCs, parentVC: self)
         return contentView
     }()
     
