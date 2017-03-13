@@ -8,6 +8,10 @@
 
 import UIKit
 
+protocol PageTitleViewDelegate : class{
+    func pageTitleView(titleView : PageTitleView, selectedIndex: Int)
+}
+
 fileprivate let scrollViewLineH : CGFloat = 2
 
 //定义长量
@@ -16,6 +20,7 @@ private let kSelectColor : (CGFloat, CGFloat, CGFloat) = (255, 128, 0)
 class PageTitleView: UIView {
     
     lazy  var titleArray : [String] = [String]()
+    weak var delegate : PageTitleViewDelegate?
     fileprivate lazy var titlesLabels : [UILabel] = [UILabel]()
     fileprivate var lastIndex : Int = 0
     fileprivate lazy var scrollView : UIScrollView = {
@@ -99,22 +104,25 @@ extension PageTitleView{
         //获取当前的label
       let currentLabel =  tap.view as! UILabel
         //拿到tag
-     let currentTage = currentLabel.tag
+        let currentTage = currentLabel.tag
+        
+        if currentTage == lastIndex {return}
+        
+        //获取之前的label
+       let lastLabel = titlesLabels[lastIndex]
+        
+        currentLabel.textColor = UIColor(r: kSelectColor.0, g: kSelectColor.1, b: kSelectColor.2)
+        lastLabel.textColor = UIColor(r: kNormalColor.0, g: kNormalColor.1, b: kNormalColor.2)
+        
+        currentLabel.textColor = UIColor.orange
+        
+        UIView.animate(withDuration: 0.25) {
+            self.scrollViewLine.frame.origin.x = CGFloat(currentTage) * (self.scrollViewLine.frame.size.width)
+        }
+        
+         lastIndex = currentTage;
     
-    if currentTage == lastIndex {return}
+        delegate?.pageTitleView(titleView: self, selectedIndex: currentTage)
     
-    //获取之前的label
-   let lastLabel = titlesLabels[lastIndex]
-    
-    currentLabel.textColor = UIColor(r: kSelectColor.0, g: kSelectColor.1, b: kSelectColor.2)
-    lastLabel.textColor = UIColor(r: kNormalColor.0, g: kNormalColor.1, b: kNormalColor.2)
-    
-    currentLabel.textColor = UIColor.orange
-    
-    UIView.animate(withDuration: 0.25) {
-        self.scrollViewLine.frame.origin.x = CGFloat(currentTage) * (self.scrollViewLine.frame.size.width)
-    }
-    
-     lastIndex = currentTage;
     }
 }

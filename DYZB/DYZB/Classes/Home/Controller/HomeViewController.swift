@@ -9,12 +9,12 @@
 import UIKit
 
 class HomeViewController: UIViewController {
-    
-    lazy var pageTitleView : PageTitleView = {
+    lazy var pageTitleView : PageTitleView = {[weak self] in
         let titles = ["推荐","游戏", "娱乐","趣玩"]
         let pageTitleView = PageTitleView(frame: CGRect(x: 0, y: kNavigationH, width: screenW, height: pageTitleViewH)  , titles:  titles)
+        pageTitleView.delegate = self?.pageContentView
         return pageTitleView
-    }()
+        }()
     
     fileprivate lazy var  pageContentView : PageContentView = {[weak self] in
         let frame = CGRect(x: 0, y: kNavigationH + pageTitleViewH, width: screenW, height: screenH - kNavigationH - pageTitleViewH)
@@ -25,7 +25,9 @@ class HomeViewController: UIViewController {
         childVCs.append(FunnyViewController())
         let  contentView = PageContentView(frame:frame , childVCs: childVCs, parentVC: self)
         return contentView
-    }()
+        }()
+    
+   
     
     override func viewDidLoad() {
         super.viewDidLoad()

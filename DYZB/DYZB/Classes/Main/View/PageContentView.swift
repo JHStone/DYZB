@@ -80,3 +80,10 @@ extension  PageContentView: UICollectionViewDataSource{
         return collectionViewCell
     }
 }
+
+//MARK:- titleViewDelegate
+extension  PageContentView : PageTitleViewDelegate{
+    func pageTitleView(titleView: PageTitleView, selectedIndex: Int) {
+        print(selectedIndex)
+    }
+}
