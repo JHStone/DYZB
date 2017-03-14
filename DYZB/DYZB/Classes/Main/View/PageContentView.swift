@@ -95,34 +95,41 @@ extension PageContentView: UICollectionViewDelegate{
     
     
     func scrollViewDidScroll(_ scrollView: UIScrollView) {
-        
         var sourceIndex = 0
         var targetIndex = 0
         var progress : CGFloat = 0
         let currentX = collectionView.contentOffset.x
         let scrollViewW = scrollView.bounds.width
+        sourceIndex = Int(currentX / scrollViewW)
         
         //判断左滑还是右滑
         if currentX > originalX {//左滑
-            sourceIndex = Int(currentX / scrollViewW)
+            
             targetIndex = sourceIndex + 1
             let floatSource = CGFloat(sourceIndex)
             progress = (currentX - floatSource * scrollViewW) / scrollViewW
             
             if currentX - originalX == scrollViewW{
                 progress = 1
-                sourceIndex = targetIndex
             }
             
-            if sourceIndex > (childVCs?.count)! - 1{
-                sourceIndex = (childVCs?.count)! - 1
+            if targetIndex >= (childVCs?.count)!{
+                targetIndex = (childVCs?.count)! - 1
             }
             print(progress)
-        }else{//右滑
             
+        }else{//右滑
+            targetIndex = sourceIndex - 1
+            
+            progress = (originalX - currentX) / scrollViewW
+            
+            if targetIndex <= 0 {
+                targetIndex = 0
+            }
+            
+            print(progress)
         }
-        
-        
+         
     }
 }
 
