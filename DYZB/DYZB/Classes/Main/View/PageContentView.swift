@@ -33,6 +33,7 @@ class PageContentView: UIView {
         collection.dataSource = self
         collection.delegate  = self
         collection.isPagingEnabled = true
+        collection.bounces = false
         return collection
     }()
     

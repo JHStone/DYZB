@@ -138,6 +138,14 @@ extension PageTitleView{
         let moveTotalX = targetLabel.frame.origin.x - sourceLabel.frame.origin.x
         let moveX = moveTotalX * progress
         scrollViewLine.frame.origin.x = sourceLabel.frame.origin.x + moveX
+        
+        //颜色的变化
+         let colorDelta = (kSelectColor.0 - kNormalColor.0, kSelectColor.1 - kNormalColor.1, kSelectColor.2 - kNormalColor.2)
+        // 3.2.变化sourceLabel
+        sourceLabel.textColor = UIColor(r: kSelectColor.0 - colorDelta.0 * progress, g: kSelectColor.1 - colorDelta.1 * progress, b: kSelectColor.2 - colorDelta.2 * progress)
+        
+        // 3.2.变化targetLabel
+        targetLabel.textColor = UIColor(r: kNormalColor.0 + colorDelta.0 * progress, g: kNormalColor.1 + colorDelta.1 * progress, b: kNormalColor.2 + colorDelta.2 * progress)
     }
     
 }
