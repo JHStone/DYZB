@@ -12,7 +12,7 @@ class HomeViewController: UIViewController {
     lazy var pageTitleView : PageTitleView = {[weak self] in
         let titles = ["推荐","游戏", "娱乐","趣玩"]
         let pageTitleView = PageTitleView(frame: CGRect(x: 0, y: kNavigationH, width: screenW, height: pageTitleViewH)  , titles:  titles)
-        pageTitleView.delegate = self?.pageContentView
+        pageTitleView.delegate = self
         return pageTitleView
         }()
     
@@ -24,6 +24,7 @@ class HomeViewController: UIViewController {
         childVCs.append(AmuseViewController())
         childVCs.append(FunnyViewController())
         let  contentView = PageContentView(frame:frame , childVCs: childVCs, parentVC: self)
+        contentView.delegate = self
         return contentView
         }()
     
@@ -63,5 +64,19 @@ extension HomeViewController{
     
     fileprivate func setupPageContentView(){
         view.addSubview(self.pageContentView)
+    }
+}
+
+//MARK:- PageTitleViewDelegate
+extension HomeViewController : PageTitleViewDelegate{
+    func pageTitleView(titleView: PageTitleView, selectedIndex: Int) {
+        pageContentView.setupContentOffset(titleView: pageTitleView, selectedIndex: selectedIndex)
+    }
+}
+
+//MARK:- PageContentViewDelegate
+extension HomeViewController : PageContentViewDeledate{
+    func pageContentView(pageView: PageContentView, sourceIndex: Int, target: Int, progress: CGFloat) {
+        pageTitleView.setupTitleViewContentOffset(pageView : pageView, sourceIndex: sourceIndex, target: target, progress: progress)
     }
 }

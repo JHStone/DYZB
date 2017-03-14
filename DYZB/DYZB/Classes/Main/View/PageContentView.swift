@@ -8,13 +8,14 @@
 
 import UIKit
 
-//protocol PageContentViewDeledate : class {
-//    func  pageContentView(pageView : PageContentView, )
-//}
+protocol PageContentViewDeledate : class {
+    func  pageContentView(pageView : PageContentView, sourceIndex: Int, target: Int, progress: CGFloat)
+}
 
 private let ContentCellID = "ContentCellID"
 
 class PageContentView: UIView {
+    weak var delegate : PageContentViewDeledate?
     
     fileprivate var childVCs : [UIViewController]?
     fileprivate var originalX : CGFloat = 0
@@ -100,11 +101,11 @@ extension PageContentView: UICollectionViewDelegate{
         var progress : CGFloat = 0
         let currentX = collectionView.contentOffset.x
         let scrollViewW = scrollView.bounds.width
-        sourceIndex = Int(currentX / scrollViewW)
+
         
         //判断左滑还是右滑
         if currentX > originalX {//左滑
-            
+            sourceIndex = Int(currentX / scrollViewW)
             targetIndex = sourceIndex + 1
             let floatSource = CGFloat(sourceIndex)
             progress = (currentX - floatSource * scrollViewW) / scrollViewW
@@ -119,7 +120,9 @@ extension PageContentView: UICollectionViewDelegate{
             print(progress)
             
         }else{//右滑
-            targetIndex = sourceIndex - 1
+            targetIndex = Int(currentX / scrollViewW)
+            
+            sourceIndex = targetIndex + 1
             
             progress = (originalX - currentX) / scrollViewW
             
@@ -129,16 +132,17 @@ extension PageContentView: UICollectionViewDelegate{
             
             print(progress)
         }
-         
+        
+          delegate?.pageContentView(pageView: self, sourceIndex: sourceIndex, target: targetIndex, progress: progress)
+        
     }
 }
 
-//MARK:- titleViewDelegate
-extension  PageContentView : PageTitleViewDelegate{
-    func pageTitleView(titleView: PageTitleView, selectedIndex: Int) {
+//MARK:- 对外暴漏的方法
+extension  PageContentView{
+    func setupContentOffset(titleView: PageTitleView, selectedIndex: Int){
         let  offSet = (CGFloat(selectedIndex)) * screenW
         collectionView.setContentOffset(CGPoint(x: offSet, y: 0), animated: false)
     }
-    
     
 }

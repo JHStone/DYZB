@@ -126,3 +126,11 @@ extension PageTitleView{
     
     }
 }
+
+//MARK:- collectionView的滚动
+extension PageTitleView{
+    func setupTitleViewContentOffset(pageView: PageContentView, sourceIndex: Int, target: Int, progress: CGFloat) {
+         print("--------\(sourceIndex),\(target),\(progress)")
+    }
+    
+}
