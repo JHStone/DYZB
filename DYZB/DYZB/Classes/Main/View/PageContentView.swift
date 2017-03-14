@@ -8,12 +8,16 @@
 
 import UIKit
 
+//protocol PageContentViewDeledate : class {
+//    func  pageContentView(pageView : PageContentView, )
+//}
 
 private let ContentCellID = "ContentCellID"
 
 class PageContentView: UIView {
     
     fileprivate var childVCs : [UIViewController]?
+    fileprivate var originalX : CGFloat = 0
     fileprivate var parentController : HomeViewController?
     fileprivate lazy var collectionView :UICollectionView = {[weak self] in
         let layout = UICollectionViewFlowLayout()
@@ -26,6 +30,7 @@ class PageContentView: UIView {
         collection.register(UICollectionViewCell.self, forCellWithReuseIdentifier: ContentCellID)
         collection.backgroundColor = UIColor.white
         collection.dataSource = self
+        collection.delegate  = self
         collection.isPagingEnabled = true
         return collection
     }()
@@ -78,6 +83,46 @@ extension  PageContentView: UICollectionViewDataSource{
         collectionViewCell.addSubview(childView!)
         
         return collectionViewCell
+    }
+}
+
+
+extension PageContentView: UICollectionViewDelegate{
+    func scrollViewWillBeginDragging(_ scrollView: UIScrollView) {
+        //起始点
+        originalX = collectionView.contentOffset.x
+    }
+    
+    
+    func scrollViewDidScroll(_ scrollView: UIScrollView) {
+        
+        var sourceIndex = 0
+        var targetIndex = 0
+        var progress : CGFloat = 0
+        let currentX = collectionView.contentOffset.x
+        let scrollViewW = scrollView.bounds.width
+        
+        //判断左滑还是右滑
+        if currentX > originalX {//左滑
+            sourceIndex = Int(currentX / scrollViewW)
+            targetIndex = sourceIndex + 1
+            let floatSource = CGFloat(sourceIndex)
+            progress = (currentX - floatSource * scrollViewW) / scrollViewW
+            
+            if currentX - originalX == scrollViewW{
+                progress = 1
+                sourceIndex = targetIndex
+            }
+            
+            if sourceIndex > (childVCs?.count)! - 1{
+                sourceIndex = (childVCs?.count)! - 1
+            }
+            print(progress)
+        }else{//右滑
+            
+        }
+        
+        
     }
 }
 
