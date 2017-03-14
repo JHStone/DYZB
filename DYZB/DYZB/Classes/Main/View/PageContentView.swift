@@ -96,9 +96,10 @@ extension PageContentView: UICollectionViewDelegate{
     
     
     func scrollViewDidScroll(_ scrollView: UIScrollView) {
-        var sourceIndex = 0
-        var targetIndex = 0
         var progress : CGFloat = 0
+        var sourceIndex : Int = 0
+        var targetIndex : Int = 0
+        
         let currentX = collectionView.contentOffset.x
         let scrollViewW = scrollView.bounds.width
 
@@ -123,7 +124,6 @@ extension PageContentView: UICollectionViewDelegate{
             }
             
         }else{//右滑
-            
             // 1.计算progress
             progress = 1 - (currentX / scrollViewW - floor(currentX / scrollViewW))
             
@@ -135,7 +135,7 @@ extension PageContentView: UICollectionViewDelegate{
             if sourceIndex >= (childVCs?.count)! {
                 sourceIndex = (childVCs?.count)! - 1
             }
-    }
+        }
         
          delegate?.pageContentView(pageView: self, sourceIndex: sourceIndex, target: targetIndex, progress: progress)
     }
