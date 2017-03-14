@@ -130,7 +130,14 @@ extension PageTitleView{
 //MARK:- collectionView的滚动
 extension PageTitleView{
     func setupTitleViewContentOffset(pageView: PageContentView, sourceIndex: Int, target: Int, progress: CGFloat) {
-         print("--------\(sourceIndex),\(target),\(progress)")
+        // 1.取出sourceLabel/targetLabel
+        let sourceLabel = titlesLabels[sourceIndex]
+        let targetLabel = titlesLabels[target]
+        
+        // 2.处理滑块的逻辑
+        let moveTotalX = targetLabel.frame.origin.x - sourceLabel.frame.origin.x
+        let moveX = moveTotalX * progress
+        scrollViewLine.frame.origin.x = sourceLabel.frame.origin.x + moveX
     }
     
 }

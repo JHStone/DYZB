@@ -102,39 +102,42 @@ extension PageContentView: UICollectionViewDelegate{
         let currentX = collectionView.contentOffset.x
         let scrollViewW = scrollView.bounds.width
 
-        
-        //判断左滑还是右滑
         if currentX > originalX {//左滑
-            sourceIndex = Int(currentX / scrollViewW)
-            targetIndex = sourceIndex + 1
-            let floatSource = CGFloat(sourceIndex)
-            progress = (currentX - floatSource * scrollViewW) / scrollViewW
+            // 1.计算progress
+            progress = currentX / scrollViewW - floor(currentX / scrollViewW)
             
-            if currentX - originalX == scrollViewW{
+            // 2.计算sourceIndex
+            sourceIndex = Int(currentX / scrollViewW)
+            
+            // 3.计算targetIndex
+            targetIndex = sourceIndex + 1
+            
+            // 4.如果完全划过去
+            if currentX - originalX == scrollViewW {
                 progress = 1
+                targetIndex = sourceIndex
             }
             
-            if targetIndex >= (childVCs?.count)!{
+            if targetIndex >= (childVCs?.count)! {
                 targetIndex = (childVCs?.count)! - 1
             }
-            print(progress)
             
         }else{//右滑
+            
+            // 1.计算progress
+            progress = 1 - (currentX / scrollViewW - floor(currentX / scrollViewW))
+            
+            // 2.计算targetIndex
             targetIndex = Int(currentX / scrollViewW)
             
+            // 3.计算sourceIndex
             sourceIndex = targetIndex + 1
-            
-            progress = (originalX - currentX) / scrollViewW
-            
-            if targetIndex <= 0 {
-                targetIndex = 0
+            if sourceIndex >= (childVCs?.count)! {
+                sourceIndex = (childVCs?.count)! - 1
             }
-            
-            print(progress)
-        }
+    }
         
-          delegate?.pageContentView(pageView: self, sourceIndex: sourceIndex, target: targetIndex, progress: progress)
-        
+         delegate?.pageContentView(pageView: self, sourceIndex: sourceIndex, target: targetIndex, progress: progress)
     }
 }
 
