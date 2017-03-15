@@ -81,7 +81,6 @@ extension  PageContentView: UICollectionViewDataSource{
         //拿到控制器的view添加
         let childVC = childVCs?[indexPath.item]
         let childView = childVC?.view
-        childView?.backgroundColor = UIColor(r:CGFloat(arc4random_uniform(255)), g: CGFloat(arc4random_uniform(255)), b: CGFloat(arc4random_uniform(255)))
         childView?.frame = self.bounds
         collectionViewCell.addSubview(childView!)
         
