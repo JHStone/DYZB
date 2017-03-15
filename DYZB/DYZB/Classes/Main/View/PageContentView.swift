@@ -20,6 +20,7 @@ class PageContentView: UIView {
     fileprivate var childVCs : [UIViewController]?
     fileprivate var originalX : CGFloat = 0
     fileprivate var parentController : HomeViewController?
+      fileprivate var isForbidScrollDelegate : Bool = false
     fileprivate lazy var collectionView :UICollectionView = {[weak self] in
         let layout = UICollectionViewFlowLayout()
         layout.minimumLineSpacing = 0
@@ -91,12 +92,14 @@ extension  PageContentView: UICollectionViewDataSource{
 
 extension PageContentView: UICollectionViewDelegate{
     func scrollViewWillBeginDragging(_ scrollView: UIScrollView) {
+        isForbidScrollDelegate = false
         //起始点
         originalX = collectionView.contentOffset.x
     }
     
     
     func scrollViewDidScroll(_ scrollView: UIScrollView) {
+        if isForbidScrollDelegate {return}
         var progress : CGFloat = 0
         var sourceIndex : Int = 0
         var targetIndex : Int = 0
@@ -145,6 +148,8 @@ extension PageContentView: UICollectionViewDelegate{
 //MARK:- 对外暴漏的方法
 extension  PageContentView{
     func setupContentOffset(titleView: PageTitleView, selectedIndex: Int){
+        //如果是点击事件就不执行代理方法
+        isForbidScrollDelegate = true
         let  offSet = (CGFloat(selectedIndex)) * screenW
         collectionView.setContentOffset(CGPoint(x: offSet, y: 0), animated: false)
     }

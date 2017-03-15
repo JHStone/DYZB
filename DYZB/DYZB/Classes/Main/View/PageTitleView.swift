@@ -17,6 +17,7 @@ fileprivate let scrollViewLineH : CGFloat = 2
 //定义长量
 private let kSelectColor : (CGFloat, CGFloat, CGFloat) = (255, 128, 0)
 
+
 class PageTitleView: UIView {
     
     lazy  var titleArray : [String] = [String]()
@@ -120,7 +121,7 @@ extension PageTitleView{
             self.scrollViewLine.frame.origin.x = CGFloat(currentTage) * (self.scrollViewLine.frame.size.width)
         }
         
-         lastIndex = currentTage;
+        lastIndex = currentTage;
     
         delegate?.pageTitleView(titleView: self, selectedIndex: currentTage)
     
@@ -146,6 +147,8 @@ extension PageTitleView{
         
         // 3.2.变化targetLabel
         targetLabel.textColor = UIColor(r: kNormalColor.0 + colorDelta.0 * progress, g: kNormalColor.1 + colorDelta.1 * progress, b: kNormalColor.2 + colorDelta.2 * progress)
+        
+        lastIndex = target
     }
     
 }
