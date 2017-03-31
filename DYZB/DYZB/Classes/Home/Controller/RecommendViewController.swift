@@ -8,10 +8,12 @@
 
 import UIKit
 
-fileprivate var normalItemID : String = "normalItemID"
-fileprivate var headerViewID : String = "headerViewID"
+fileprivate let normalItemID : String = "normalItemID"
+fileprivate let headerViewID : String = "headerViewID"
 
-fileprivate var itemSpace : CGFloat = 10
+fileprivate let itemSpace : CGFloat = 10
+
+fileprivate let kHeaderViewH : CGFloat = 50;
 
 
 class RecommendViewController: UIViewController {
@@ -23,6 +25,7 @@ class RecommendViewController: UIViewController {
         layout.itemSize = CGSize(width: itemW, height: itemH)
         layout.minimumLineSpacing = 0
         layout.minimumInteritemSpacing = itemSpace
+        layout.headerReferenceSize = CGSize(width: screenW, height: kHeaderViewH)
         let collection = UICollectionView(frame: (self?.view.bounds)!, collectionViewLayout: layout)
         collection.dataSource = self
         collection.backgroundColor = UIColor.gray
@@ -79,5 +82,8 @@ extension RecommendViewController : UICollectionViewDataSource {
         let reusableView = collectionView.dequeueReusableSupplementaryView(ofKind: kind, withReuseIdentifier: headerViewID, for: indexPath)
         return reusableView
     }
+    
+    
+    
     
 }
