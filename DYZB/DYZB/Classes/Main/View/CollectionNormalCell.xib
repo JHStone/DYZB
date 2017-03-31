@@ -69,7 +69,7 @@
                 <constraint firstItem="4Bd-Uu-iO5" firstAttribute="top" secondItem="7NW-sQ-qoK" secondAttribute="bottom" constant="5" id="wsa-Cg-bnW"/>
             </constraints>
             <size key="customSize" width="290" height="219"/>
-            <point key="canvasLocation" x="-198" y="-30.5"/>
+            <point key="canvasLocation" x="-336" y="-11"/>
         </collectionViewCell>
     </objects>
     <resources>

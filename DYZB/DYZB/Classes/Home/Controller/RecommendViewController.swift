@@ -9,6 +9,7 @@
 import UIKit
 
 fileprivate let normalItemID : String = "normalItemID"
+fileprivate let prettyItemID : String = "prettyItemID"
 fileprivate let headerViewID : String = "headerViewID"
 
 fileprivate let itemSpace : CGFloat = 10
@@ -34,7 +35,7 @@ class RecommendViewController: UIViewController {
         collection.contentInset = UIEdgeInsetsMake(0, 10, 49, 10)
         collection.register(UINib(nibName: "CollectionHeaderView", bundle: nil), forSupplementaryViewOfKind: UICollectionElementKindSectionHeader, withReuseIdentifier: headerViewID)
         collection.register(UINib.init(nibName: "CollectionNormalCell", bundle: nil), forCellWithReuseIdentifier: normalItemID)
-        
+        collection.register(UINib.init(nibName: "CollectionPrettyCell", bundle: nil), forCellWithReuseIdentifier: prettyItemID)
         return collection
     }()
 
@@ -74,8 +75,13 @@ extension RecommendViewController : UICollectionViewDataSource {
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        let item = collectionView.dequeueReusableCell(withReuseIdentifier: normalItemID, for: indexPath)
-        return item
+        let cell : UICollectionViewCell;
+        if indexPath.section == 1 {
+            cell = collectionView.dequeueReusableCell(withReuseIdentifier: prettyItemID, for: indexPath)
+        }else{
+            cell = collectionView.dequeueReusableCell(withReuseIdentifier: normalItemID, for: indexPath)
+        }
+        return cell;
     }
     
     func collectionView(_ collectionView: UICollectionView, viewForSupplementaryElementOfKind kind: String, at indexPath: IndexPath) -> UICollectionReusableView {
