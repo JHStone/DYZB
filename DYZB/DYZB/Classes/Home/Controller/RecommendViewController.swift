@@ -28,8 +28,10 @@ class RecommendViewController: UIViewController {
         layout.headerReferenceSize = CGSize(width: screenW, height: kHeaderViewH)
         let collection = UICollectionView(frame: (self?.view.bounds)!, collectionViewLayout: layout)
         collection.dataSource = self
-        collection.backgroundColor = UIColor.gray
-        collection.contentInset = UIEdgeInsetsMake(0, 10, 0, 10)
+        collection.backgroundColor = UIColor.white
+        collection.autoresizingMask = [.flexibleHeight , .flexibleWidth];
+        
+        collection.contentInset = UIEdgeInsetsMake(0, 10, 49, 10)
         collection.register(UICollectionViewCell.self, forCellWithReuseIdentifier: normalItemID)
         collection.register(UINib(nibName: "CollectionHeaderView", bundle: nil), forSupplementaryViewOfKind: UICollectionElementKindSectionHeader, withReuseIdentifier: headerViewID)
         
@@ -40,7 +42,6 @@ class RecommendViewController: UIViewController {
         super.viewDidLoad()
         view.backgroundColor = UIColor.red
         setupUI()
-        
         
     }
 
