@@ -9,6 +9,7 @@
 import UIKit
 
 fileprivate var normalItemID : String = "normalItemID"
+fileprivate var headerViewID : String = "headerViewID"
 
 fileprivate var itemSpace : CGFloat = 10
 
@@ -25,8 +26,10 @@ class RecommendViewController: UIViewController {
         let collection = UICollectionView(frame: (self?.view.bounds)!, collectionViewLayout: layout)
         collection.dataSource = self
         collection.backgroundColor = UIColor.gray
-        collection.register(UICollectionViewCell.self, forCellWithReuseIdentifier: normalItemID)
         collection.contentInset = UIEdgeInsetsMake(0, 10, 0, 10)
+        collection.register(UICollectionViewCell.self, forCellWithReuseIdentifier: normalItemID)
+        collection.register(UINib(nibName: "CollectionHeaderView", bundle: nil), forSupplementaryViewOfKind: UICollectionElementKindSectionHeader, withReuseIdentifier: headerViewID)
+        
         return collection
     }()
 
@@ -34,6 +37,8 @@ class RecommendViewController: UIViewController {
         super.viewDidLoad()
         view.backgroundColor = UIColor.red
         setupUI()
+        
+        
     }
 
     override func didReceiveMemoryWarning() {
@@ -70,5 +75,9 @@ extension RecommendViewController : UICollectionViewDataSource {
         return item
     }
     
+    func collectionView(_ collectionView: UICollectionView, viewForSupplementaryElementOfKind kind: String, at indexPath: IndexPath) -> UICollectionReusableView {
+        let reusableView = collectionView.dequeueReusableSupplementaryView(ofKind: kind, withReuseIdentifier: headerViewID, for: indexPath)
+        return reusableView
+    }
     
 }

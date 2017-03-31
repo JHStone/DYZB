@@ -15,6 +15,8 @@
 		DF3FE10B1E52F8F400A30239 /* PageTitleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF3FE10A1E52F8F400A30239 /* PageTitleView.swift */; };
 		DF3FE10D1E52FE4800A30239 /* Common.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF3FE10C1E52FE4800A30239 /* Common.swift */; };
 		DF3FE10F1E53028000A30239 /* UIColor-Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF3FE10E1E53028000A30239 /* UIColor-Extension.swift */; };
+		DF4E0E331E793D8000EBEDFA /* CollectionHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF4E0E311E793D8000EBEDFA /* CollectionHeaderView.swift */; };
+		DF4E0E341E793D8000EBEDFA /* CollectionHeaderView.xib in Resources */ = {isa = PBXBuildFile; fileRef = DF4E0E321E793D8000EBEDFA /* CollectionHeaderView.xib */; };
 		DFE058211E52DE960027CF60 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DFE058201E52DE960027CF60 /* HomeViewController.swift */; };
 		DFE058231E52E3070027CF60 /* UIBarButtonItem-Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = DFE058221E52E3070027CF60 /* UIBarButtonItem-Extension.swift */; };
 		DFEF78FD1E51B35500120B3B /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DFEF78FC1E51B35500120B3B /* AppDelegate.swift */; };
@@ -56,6 +58,8 @@
 		DF3FE10A1E52F8F400A30239 /* PageTitleView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PageTitleView.swift; sourceTree = "<group>"; };
 		DF3FE10C1E52FE4800A30239 /* Common.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Common.swift; sourceTree = "<group>"; };
 		DF3FE10E1E53028000A30239 /* UIColor-Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIColor-Extension.swift"; sourceTree = "<group>"; };
+		DF4E0E311E793D8000EBEDFA /* CollectionHeaderView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CollectionHeaderView.swift; sourceTree = "<group>"; };
+		DF4E0E321E793D8000EBEDFA /* CollectionHeaderView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CollectionHeaderView.xib; sourceTree = "<group>"; };
 		DFE058201E52DE960027CF60 /* HomeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
 		DFE058221E52E3070027CF60 /* UIBarButtonItem-Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIBarButtonItem-Extension.swift"; sourceTree = "<group>"; };
 		DFEF78F91E51B35500120B3B /* DYZB.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DYZB.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -230,6 +234,8 @@
 		DFEF79321E51B42E00120B3B /* View */ = {
 			isa = PBXGroup;
 			children = (
+				DF4E0E311E793D8000EBEDFA /* CollectionHeaderView.swift */,
+				DF4E0E321E793D8000EBEDFA /* CollectionHeaderView.xib */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -451,6 +457,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				DFEF794B1E51BCBD00120B3B /* Main.storyboard in Resources */,
+				DF4E0E341E793D8000EBEDFA /* CollectionHeaderView.xib in Resources */,
 				DFEF79071E51B35500120B3B /* LaunchScreen.storyboard in Resources */,
 				DFEF79451E51B81D00120B3B /* Home.storyboard in Resources */,
 				DFEF79471E51B82500120B3B /* Live.storyboard in Resources */,
@@ -488,6 +495,7 @@
 				DF3FE10B1E52F8F400A30239 /* PageTitleView.swift in Sources */,
 				DF19DBFB1E76853000CDE687 /* PageContentView.swift in Sources */,
 				DFE058231E52E3070027CF60 /* UIBarButtonItem-Extension.swift in Sources */,
+				DF4E0E331E793D8000EBEDFA /* CollectionHeaderView.swift in Sources */,
 				DF3FE10D1E52FE4800A30239 /* Common.swift in Sources */,
 				DF3FE10F1E53028000A30239 /* UIColor-Extension.swift in Sources */,
 				DF19DC011E76884300CDE687 /* AmuseViewController.swift in Sources */,
