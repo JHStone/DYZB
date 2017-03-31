@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		DF136F751E8E30420096FD46 /* CollectionNormalCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF136F731E8E30420096FD46 /* CollectionNormalCell.swift */; };
+		DF136F761E8E30420096FD46 /* CollectionNormalCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = DF136F741E8E30420096FD46 /* CollectionNormalCell.xib */; };
 		DF19DBFB1E76853000CDE687 /* PageContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF19DBFA1E76853000CDE687 /* PageContentView.swift */; };
 		DF19DBFD1E76882F00CDE687 /* RecommendViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF19DBFC1E76882F00CDE687 /* RecommendViewController.swift */; };
 		DF19DBFF1E76883A00CDE687 /* GameViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF19DBFE1E76883A00CDE687 /* GameViewController.swift */; };
@@ -50,6 +52,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		DF136F731E8E30420096FD46 /* CollectionNormalCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CollectionNormalCell.swift; sourceTree = "<group>"; };
+		DF136F741E8E30420096FD46 /* CollectionNormalCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CollectionNormalCell.xib; sourceTree = "<group>"; };
 		DF19DBFA1E76853000CDE687 /* PageContentView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PageContentView.swift; sourceTree = "<group>"; };
 		DF19DBFC1E76882F00CDE687 /* RecommendViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RecommendViewController.swift; sourceTree = "<group>"; };
 		DF19DBFE1E76883A00CDE687 /* GameViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GameViewController.swift; sourceTree = "<group>"; };
@@ -345,6 +349,8 @@
 			children = (
 				DF3FE10A1E52F8F400A30239 /* PageTitleView.swift */,
 				DF19DBFA1E76853000CDE687 /* PageContentView.swift */,
+				DF136F731E8E30420096FD46 /* CollectionNormalCell.swift */,
+				DF136F741E8E30420096FD46 /* CollectionNormalCell.xib */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -458,6 +464,7 @@
 			files = (
 				DFEF794B1E51BCBD00120B3B /* Main.storyboard in Resources */,
 				DF4E0E341E793D8000EBEDFA /* CollectionHeaderView.xib in Resources */,
+				DF136F761E8E30420096FD46 /* CollectionNormalCell.xib in Resources */,
 				DFEF79071E51B35500120B3B /* LaunchScreen.storyboard in Resources */,
 				DFEF79451E51B81D00120B3B /* Home.storyboard in Resources */,
 				DFEF79471E51B82500120B3B /* Live.storyboard in Resources */,
@@ -496,6 +503,7 @@
 				DF19DBFB1E76853000CDE687 /* PageContentView.swift in Sources */,
 				DFE058231E52E3070027CF60 /* UIBarButtonItem-Extension.swift in Sources */,
 				DF4E0E331E793D8000EBEDFA /* CollectionHeaderView.swift in Sources */,
+				DF136F751E8E30420096FD46 /* CollectionNormalCell.swift in Sources */,
 				DF3FE10D1E52FE4800A30239 /* Common.swift in Sources */,
 				DF3FE10F1E53028000A30239 /* UIColor-Extension.swift in Sources */,
 				DF19DC011E76884300CDE687 /* AmuseViewController.swift in Sources */,

@@ -32,8 +32,8 @@ class RecommendViewController: UIViewController {
         collection.autoresizingMask = [.flexibleHeight , .flexibleWidth];
         
         collection.contentInset = UIEdgeInsetsMake(0, 10, 49, 10)
-        collection.register(UICollectionViewCell.self, forCellWithReuseIdentifier: normalItemID)
         collection.register(UINib(nibName: "CollectionHeaderView", bundle: nil), forSupplementaryViewOfKind: UICollectionElementKindSectionHeader, withReuseIdentifier: headerViewID)
+        collection.register(UINib.init(nibName: "CollectionNormalCell", bundle: nil), forCellWithReuseIdentifier: normalItemID)
         
         return collection
     }()
@@ -75,7 +75,6 @@ extension RecommendViewController : UICollectionViewDataSource {
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let item = collectionView.dequeueReusableCell(withReuseIdentifier: normalItemID, for: indexPath)
-        item.backgroundColor = UIColor.red
         return item
     }
     
