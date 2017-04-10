@@ -43,7 +43,7 @@ class RecommendViewController: UIViewController {
         super.viewDidLoad()
         view.backgroundColor = UIColor.red
         setupUI()
-        
+        loadData()
     }
 
     override func didReceiveMemoryWarning() {
@@ -88,8 +88,12 @@ extension RecommendViewController : UICollectionViewDataSource {
         let reusableView = collectionView.dequeueReusableSupplementaryView(ofKind: kind, withReuseIdentifier: headerViewID, for: indexPath)
         return reusableView
     }
-    
-    
-    
-    
+}
+
+extension RecommendViewController{
+    func loadData(){
+        NetWorkTools.requestData(type: .MethodTypeGet, urlString: "http://httpbin.org", parameters: nil) { (result) in
+            print(result)
+        }
+    }
 }

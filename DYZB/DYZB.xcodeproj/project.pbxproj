@@ -16,6 +16,7 @@
 		DF19DBFF1E76883A00CDE687 /* GameViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF19DBFE1E76883A00CDE687 /* GameViewController.swift */; };
 		DF19DC011E76884300CDE687 /* AmuseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF19DC001E76884300CDE687 /* AmuseViewController.swift */; };
 		DF19DC031E76884B00CDE687 /* FunnyViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF19DC021E76884B00CDE687 /* FunnyViewController.swift */; };
+		DF2CDBEA1E9B69680099A792 /* NetWorkTools.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF2CDBE91E9B69680099A792 /* NetWorkTools.swift */; };
 		DF3FE10B1E52F8F400A30239 /* PageTitleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF3FE10A1E52F8F400A30239 /* PageTitleView.swift */; };
 		DF3FE10D1E52FE4800A30239 /* Common.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF3FE10C1E52FE4800A30239 /* Common.swift */; };
 		DF3FE10F1E53028000A30239 /* UIColor-Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF3FE10E1E53028000A30239 /* UIColor-Extension.swift */; };
@@ -66,6 +67,7 @@
 		DF19DBFE1E76883A00CDE687 /* GameViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GameViewController.swift; sourceTree = "<group>"; };
 		DF19DC001E76884300CDE687 /* AmuseViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AmuseViewController.swift; sourceTree = "<group>"; };
 		DF19DC021E76884B00CDE687 /* FunnyViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FunnyViewController.swift; sourceTree = "<group>"; };
+		DF2CDBE91E9B69680099A792 /* NetWorkTools.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NetWorkTools.swift; sourceTree = "<group>"; };
 		DF3FE10A1E52F8F400A30239 /* PageTitleView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PageTitleView.swift; sourceTree = "<group>"; };
 		DF3FE10C1E52FE4800A30239 /* Common.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Common.swift; sourceTree = "<group>"; };
 		DF3FE10E1E53028000A30239 /* UIColor-Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIColor-Extension.swift"; sourceTree = "<group>"; };
@@ -342,6 +344,7 @@
 				DFE058221E52E3070027CF60 /* UIBarButtonItem-Extension.swift */,
 				DF3FE10E1E53028000A30239 /* UIColor-Extension.swift */,
 				DF3FE10C1E52FE4800A30239 /* Common.swift */,
+				DF2CDBE91E9B69680099A792 /* NetWorkTools.swift */,
 			);
 			path = Tools;
 			sourceTree = "<group>";
@@ -585,6 +588,7 @@
 				DF3FE10B1E52F8F400A30239 /* PageTitleView.swift in Sources */,
 				DF19DBFB1E76853000CDE687 /* PageContentView.swift in Sources */,
 				DFE058231E52E3070027CF60 /* UIBarButtonItem-Extension.swift in Sources */,
+				DF2CDBEA1E9B69680099A792 /* NetWorkTools.swift in Sources */,
 				DF4E0E331E793D8000EBEDFA /* CollectionHeaderView.swift in Sources */,
 				DF136F751E8E30420096FD46 /* CollectionNormalCell.swift in Sources */,
 				DF3FE10D1E52FE4800A30239 /* Common.swift in Sources */,
@@ -738,7 +742,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				INFOPLIST_FILE = DYZB/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = yika.DYZB;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -753,7 +757,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				INFOPLIST_FILE = DYZB/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = yika.DYZB;
 				PRODUCT_NAME = "$(TARGET_NAME)";
